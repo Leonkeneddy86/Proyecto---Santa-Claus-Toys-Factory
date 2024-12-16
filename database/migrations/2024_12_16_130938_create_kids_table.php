@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('kids', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('surname');
+            $table->string('foto');          
+            $table->integer('age');
+            $table->enum('gender', ['boy', 'girl']);
+            $table->enum('atitude', ['good', 'bad']);
             $table->timestamps();
         });
     }
