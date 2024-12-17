@@ -12,7 +12,8 @@ class KidController extends Controller
      */
     public function index()
     {
-        //
+        $kids = Kid::get();
+        return view('index', compact('santa'));
     }
 
     /**
@@ -34,9 +35,10 @@ class KidController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Kid $kid)
+    public function show(string $id)
     {
-        //
+        $kid=Kid::find($id);
+        return view('show',compact('santa'));
     }
 
     /**
