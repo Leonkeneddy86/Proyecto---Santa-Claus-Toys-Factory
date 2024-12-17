@@ -2,9 +2,26 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Testing\Fluent\Concerns\Has;
 
-class Kid extends Model
+class Feedback extends Model
 {
-    //
+    use HasFactory;
+
+    protected $fillable =
+    [
+        'name',
+        'foto',
+        'age',
+        'gender', "boy", "girl",
+        "atitude", "good", "bad",
+        
+    ];
+
+    public function Toy()
+    {
+        return $this->belongsTo(Toy::class);
+    }
 }
