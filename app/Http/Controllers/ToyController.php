@@ -12,7 +12,8 @@ class ToyController extends Controller
      */
     public function index()
     {
-        //
+        $toys = Toy::get();
+        return view('index', compact('elf'));
     }
 
     /**
@@ -34,9 +35,10 @@ class ToyController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Toy $toy)
+    public function show(string $id)
     {
-        //
+        $toy=Toy::find($id);
+        return view('show',compact('elf'));
     }
 
     /**
