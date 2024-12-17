@@ -11,10 +11,10 @@ class Toy extends Model
     //
     use HasFactory;
     protected $fillable = [
-        "offer",
-        "description",
-        "company" ,
-        "status",
+        "name",
+        "picture",
+        "descreption" ,
+        "min_age",
     ];
     public function Toy (){
         
