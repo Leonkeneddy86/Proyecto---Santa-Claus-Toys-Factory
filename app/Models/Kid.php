@@ -12,8 +12,12 @@ class Kid extends Model
 
     protected $fillable =
     [
-        'offer_id',
-        'news'
+        'name',
+        'foto',
+        'age',
+        'gender', "boy", "girl",
+        "atitude", "good", "bad",
+        
     ];
 
     public function Toy()
