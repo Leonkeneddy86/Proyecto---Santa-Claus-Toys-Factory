@@ -15,12 +15,9 @@ class Feedback extends Model
         'name',
         'foto',
         'age',
-        'gender',
-        'boy',
-        'girl',
-        'atitude',
-        'good',
-        'bad',
+        'gender', "boy", "girl",
+        "atitude", "good", "bad",
+        
     ];
 
     public function Toy()
