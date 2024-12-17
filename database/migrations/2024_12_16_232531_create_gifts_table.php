@@ -11,14 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('kids', function (Blueprint $table) {
+        Schema::create('gifts', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('surname');
-            $table->string('foto');          
-            $table->integer('age');
-            $table->enum('gender', ['boy', 'girl']);
-            $table->enum('atitude', ['good', 'bad']);
+            $table->foreignId('kid_id')->constrained()->onDelete('cascade');
+            $table->foreignId('toy_id')->nullable()->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -28,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('kids');
+        Schema::dropIfExists('gifts');
     }
 };
