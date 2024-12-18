@@ -13,7 +13,7 @@ class ToyController extends Controller
     public function index()
     {
         $toys = Toy::get();
-        return view('index', compact('elf'));
+        return view('elf', compact('toys'));
     }
 
     /**

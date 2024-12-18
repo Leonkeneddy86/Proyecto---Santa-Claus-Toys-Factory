@@ -13,7 +13,7 @@ class KidController extends Controller
     public function index()
     {
         $kids = Kid::get();
-        return view('index', compact('santa'));
+        return view('santa', compact('kids'));
     }
 
     /**
