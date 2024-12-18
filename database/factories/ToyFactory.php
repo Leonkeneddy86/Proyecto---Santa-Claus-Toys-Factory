@@ -14,10 +14,13 @@ class ToyFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    public function definition(): array
+    public function definition()
     {
         return [
-            //
+            'name' => $this->faker->word(),
+            'picture' => $this->faker->imageUrl(640, 480, 'toys', true),
+            'descreption' => $this->faker->sentence(),
+            'min_age' => $this->faker->randomElement(['0', '+7', '+12']),
         ];
     }
 }

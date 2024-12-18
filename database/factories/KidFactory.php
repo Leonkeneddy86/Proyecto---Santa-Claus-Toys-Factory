@@ -14,10 +14,15 @@ class KidFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    public function definition(): array
+    public function definition()
     {
         return [
-            //
+            'name' => $this->faker->firstName(),
+            'surname' => $this->faker->lastName(),
+            'foto' => $this->faker->imageUrl(640, 480, 'kids', true),
+            'age' => $this->faker->numberBetween(1, 15),
+            'gender' => $this->faker->randomElement(['boy', 'girl']),
+            'atitude' => $this->faker->randomElement(['good', 'bad']),
         ];
     }
 }

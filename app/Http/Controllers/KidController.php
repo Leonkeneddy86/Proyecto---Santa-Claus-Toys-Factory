@@ -38,7 +38,7 @@ class KidController extends Controller
     public function show(string $id)
     {
         $kid=Kid::find($id);
-        return view('show',compact('santa'));
+        return view('show',compact('kid'));
     }
 
     /**
