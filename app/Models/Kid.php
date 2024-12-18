@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Testing\Fluent\Concerns\Has;
 
-class Feedback extends Model
+class Kid extends Model
 {
     use HasFactory;
 
@@ -22,6 +22,6 @@ class Feedback extends Model
 
     public function Toy()
     {
-        return $this->belongsTo(Toy::class);
+        return $this->hasMany(Toy::class);
     }
 }
